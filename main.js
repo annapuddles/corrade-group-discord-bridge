@@ -81,7 +81,7 @@ mqttClient.on('message', (topic, message) => {
     }
 
     // Make an object out of the notification.
-    let mqttMessage = qs.parse(message.toString())
+    let mqttMessage = config.corrade.language === 'WAS' ? qs.parse(message.toString()) : JSON.parse(message.toString())
 
     // Check that the "tell" command was successful and warn otherwise.
     if (typeof mqttMessage.command !== 'undefined' && mqttMessage.command !== 'tell') {
@@ -196,7 +196,7 @@ discordClient.on('message', (message) => {
     }
 
     // Build the tell command.
-    const corradeCommand = qs.stringify(payload)
+    const corradeCommand = config.corrade.language === 'WAS' ? qs.stringify(payload) : JSON.stringify(payload)
 
     // Store the message and check success status later.
     corradeMessages[id] = payload

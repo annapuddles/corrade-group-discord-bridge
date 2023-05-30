@@ -14,6 +14,8 @@ corrade:
   # An MQTT URL: IP address and port number of the Corrade MQTT server.
   # The IP address cannot be 0.0.0.0!
   mqtt: "mqtt://192.168.1.1:1884"
+  # The language used for scripts, WAS or JSON
+  language: "WAS"
 
 discord:
   # The bot key given to you when setting up a Discord bot.
