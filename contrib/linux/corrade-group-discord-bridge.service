@@ -1,0 +1,15 @@
+[Unit]
+Description=Corrade SecondLife Group Discord Bridge
+
+[Service]
+ExecStart=/path/to/corrade-group-discord-bridge/main.js
+Restart=always
+# Please create this user and do not use root!
+User=corrade
+Group=corrade
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/path/to/corrade-group-discord-bridge
+
+[Install]
+WantedBy=multi-user.target

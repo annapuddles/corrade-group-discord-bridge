@@ -1,0 +1,24 @@
+###########################################################################
+##    Copyright (C) 2019 Wizardry and Steamworks - License: CC BY 2.0    ##
+###########################################################################
+
+corrade:
+  # The Corrade configured group.
+  group:
+    # The configured group name.
+    name: "[Wizardry and Steamworks]:Support"
+    # The configured group UUID (obtained in SL using any 3rd party viewer)
+    uuid: "e269893f-a570-0087-930e-6ba2a0b77f9c"
+    # The password for the configured group.
+    password: "mygrouppassword"
+  # An MQTT URL: IP address and port number of the Corrade MQTT server.
+  # The IP address cannot be 0.0.0.0!
+  mqtt: "mqtt://192.168.1.1:1884"
+
+discord:
+  # The bot key given to you when setting up a Discord bot.
+  botKey: "zm1mlFk_DB.SEIP2A!ljTuxB1Gie7jq2_ojzRNQA.AzxM4SlzDaOA2kgoyH"
+  # The Discord server name (also known as a guild).
+  server: "Wizardry and Steamworks"
+  # The Discord channel name.
+  channel: "general"

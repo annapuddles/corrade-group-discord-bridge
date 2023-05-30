@@ -1,0 +1,25 @@
+{
+  "name": "corrade-group-discord-bridge",
+  "version": "1.0.0",
+  "description": "a bridge between SecondLife groups and Discord using Corrade",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "corrade",
+    "discord",
+    "bot",
+    "secondlife"
+  ],
+  "author": "Wizardry and Steamworks <office@grimore.org>",
+  "license": "CC-BY-2.0",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "mqtt": "^2.18.8",
+    "qs": "^6.9.1",
+    "uuid": "^8.3.2",
+    "winston": "^3.2.1",
+    "yamljs": "^0.3.0"
+  }
+}

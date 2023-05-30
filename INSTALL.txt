@@ -1,0 +1,66 @@
+[:- Requirements -:]
+
+* node.js (confirmed working with node.js version 10.15.3) and npm
+* a Discord bot & token (web search: creating a discord bot & getting a token)
+* Corrade or above (confirmed working with version 11.0.286.368)
+  * Corrade must have the MQTT server enabled and running
+    (Nucleus->Configuration->(Tick Advanced)->Servers->MQTT (do not enable compression)
+
+Two programs will have to be running: Corrade and the bridge program (this 
+one), at all times for the messages to be relayed between SecondLife and
+Discord.
+
+Setting up Corrade is wholely documented on the Wizardry and Steamworks Corrade page.
+Node.JS and npm can be installed for each Linux distribution and for Windows from 
+official sources.
+
+[:- Installing -:]
+
+In the directory containing this document issue the command:
+
+npm install
+
+in order to install dependencies for this program.
+
+Next, copy the file "config.yml.dist" to "config.yml" and edit "config.yml" to
+change the settings such that they match the Corrade settings.
+
+[:- Running -:]
+
+For a test run, execute:
+
+node main.js
+
+and follow the console messages. If everything went well, the program will 
+announce that it has connected to Discord and to the Corrade MQTT server.
+
+[:- Linux: Running as a Service -:]
+
+Copy the file from "contrib/linux/corrade-group-discord-bridge.service" to 
+"/etc/systemd/system/" and edit it to configure parameters matching your
+system.
+
+Issue the command:
+
+systemctl enable corrade-group-discord-bridge.service
+
+to enable the service.
+
+Then issue:
+
+systemctl start corrade-group-discord-bridge.service
+
+to start up the bridge in the background.
+
+The service will be restarted in case it crashes and will also restart after 
+reboots.
+
+(⌐■_■)
+
+[:- Windows: Running as a Service -:]
+
+Use nssm (free) or other software to install this program as a service.
+
+[:- Licensing -:]
+
+Wizardry and Steamworks Project-Closed and Open-Derivatives License 1.0 (WAS PC & OD 1.0)
