@@ -179,7 +179,7 @@ discordClient.on('message', (message) => {
 
     // If the message contains the special prefix then pass the message
     // as it is without prefixing it with the Discord username.
-    let reply = `${message.author.username}#${message.author.discriminator} [Discord]: ${messageContent}`
+    let reply = `${message.author.username} [Discord]: ${messageContent}`
 
     // Generate an unique identifier to be passed via afterburn to check whether messages have been sent.
     let id = uuid.v4()
