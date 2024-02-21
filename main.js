@@ -21,7 +21,7 @@ var discordChannelID = -1
 
 // Regex that determines whether a SecondLife group message is a message
 // that has been relayed by Corrade to the SecondLife group.
-const groupDiscordRegex = new RegExp(/^.+?#[0-9]+? \[Discord\]:.+?$/gm)
+const groupDiscordRegex = new RegExp(/^.+? \[Discord\]:.+?$/gm)
 
 // Load configuration file.
 const config = YAML.load('config.yml')
